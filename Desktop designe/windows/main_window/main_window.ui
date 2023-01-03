@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>700</width>
-    <height>600</height>
+    <width>1030</width>
+    <height>710</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -29,20 +29,24 @@ QStatusBar#statusbar{
 	font-color: #EDEDED;
 }
 
-QFrame#mainOptionalFrame {
-	border: 1px solid #ADADAD;
-	border-width: 0 0 0 1px;
+QFrame#optionalWidget {
+	border: 1px solid #D6D6D6;
+	border-width: 1px 0 0 1px;
+	background:#F6F8FA
 }
 
-QFrame#topMenuFrame {
-	border: 1px solid #ADADAD;
-	border-width: 0 0 1px 0;
-}
 
 QPushButton#applicationIconButton{
 	border: 0 solid #ADADAD;
 }
 
+QFrame#topMenuFrame{
+	background:#FFFFFF
+}
+
+QFrame#mainMenuFrame{
+	background:#FFFFFF
+}
 </string>
   </property>
   <property name="iconSize">
@@ -95,6 +99,12 @@ QPushButton#applicationIconButton{
        <size>
         <width>250</width>
         <height>16777215</height>
+       </size>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>1</width>
+        <height>1</height>
        </size>
       </property>
       <property name="acceptDrops">
@@ -624,9 +634,12 @@ QPushButton#gotoSettingsButton:pressed {
            <height>60</height>
           </size>
          </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
          <property name="styleSheet">
           <string notr="true">QFrame#searchWidgetsFrame {
-	background: #E6E6E6;
+	background: #F6F8FA;
 	border-radius: 14px;
 }
 
@@ -635,7 +648,8 @@ QPushButton#searchButton:pressed {
 }
 
 QLineEdit#searchTexInput {
-	color:#636363;
+	background: #F6F8FA;
+	color:#64666E;
 }
 
 QPushButton#aboutProgramInfoButton:pressed {
@@ -741,7 +755,7 @@ QPushButton#githubButton:pressed {
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">background: #E6E6E6;</string>
+                <string notr="true"/>
                </property>
                <property name="text">
                 <string/>
@@ -847,7 +861,7 @@ QPushButton#githubButton:pressed {
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="menuWidget">
+        <widget class="QFrame" name="optionalWidget">
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
          </property>
